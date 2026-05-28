@@ -1,0 +1,36 @@
+<main class="contenedor">
+  <section class="tarjeta">
+    <h1>Laboratorio Angular - Cálculo de notas</h1>
+    <p class="descripcion">
+      Ingrese cuatro notas, presione Procesar y observe cómo Angular actualiza los resultados sin
+      recargar la página.
+    </p>
+    <div class="formulario">
+      <label>Nota 1</label>
+      <input type="number" [(ngModel)]="n1" min="0" max="20">
+      <label>Nota 2</label>
+      <input type="number" [(ngModel)]="n2" min="0" max="20">
+      <label>Nota 3</label>
+      <input type="number" [(ngModel)]="n3" min="0" max="20">
+      <label>Nota 4</label>
+      <input type="number" [(ngModel)]="n4" min="0" max="20">
+    </div>
+    <div class="botones">
+      <button (click)="procesar()">Procesar</button>
+      <button class="secundario" (click)="limpiarFormulario()">Limpiar</button>
+      <button class="secundario" (click)="maximo()">MAXIMO</button>
+    </div>
+    <p class="mensaje">{{ mensaje }}</p>
+  </section>
+
+  <section class="tarjeta resultados">
+    <h2>Resultados</h2>
+    <p><strong>Suma:</strong> {{ suma }}</p>
+    <p><strong>Resta:</strong> {{ resta }}</p>
+    <p><strong>Multiplicación:</strong> {{ multiplicacion }}</p>
+    <p><strong>Promedio:</strong> {{ promedio }}</p>
+    <p class="estado">
+      <strong>Estado:</strong> {{ estado }}
+    </p>
+  </section>
+</main>

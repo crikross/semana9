@@ -1,0 +1,87 @@
+.contenedor {
+  max-width: 900px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 16px;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1, h2 {
+  margin-top: 0;
+  color: #1f4e79;
+}
+
+.descripcion {
+  color: #555;
+  line-height: 1.5;
+}
+
+.formulario {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.botones {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1f4e79;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #163a5a;
+}
+
+button.secundario {
+  background-color: #777;
+}
+
+.mensaje {
+  margin-top: 16px;
+  font-weight: bold;
+  color: #444;
+}
+
+.resultados p {
+  font-size: 17px;
+}
+
+.estado {
+  padding: 10px;
+  background-color: #eef5ff;
+  border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
+}
