@@ -1,6 +1,6 @@
 <main class="contenedor">
   <section class="tarjeta">
-    <h1>Laboratorio Angular - Cálculo de notas</h1>
+    <h1>Promedio de Notas- Estado Académico </h1>
     <p class="descripcion">
       Ingrese cuatro notas, presione Procesar y observe cómo Angular actualiza los resultados sin
       recargar la página.
@@ -18,19 +18,21 @@
     <div class="botones">
       <button (click)="procesar()">Procesar</button>
       <button class="secundario" (click)="limpiarFormulario()">Limpiar</button>
-      <button class="secundario" (click)="maximo()">MAXIMO</button>
     </div>
     <p class="mensaje">{{ mensaje }}</p>
   </section>
 
   <section class="tarjeta resultados">
     <h2>Resultados</h2>
-    <p><strong>Suma:</strong> {{ suma }}</p>
-    <p><strong>Resta:</strong> {{ resta }}</p>
-    <p><strong>Multiplicación:</strong> {{ multiplicacion }}</p>
+    <!-- <p><strong>Suma:</strong> {{ suma }}</p> -->
+    <!--<p><strong>Resta:</strong> {{ resta }}</p> -->
+    <!--<p><strong>Multiplicación:</strong> {{ multiplicacion }}</p> -->
     <p><strong>Promedio:</strong> {{ promedio }}</p>
     <p class="estado">
       <strong>Estado:</strong> {{ estado }}
+    </p>
+    <p class="estado">
+      <strong>Observación:</strong> {{ observacion }}
     </p>
   </section>
 </main>

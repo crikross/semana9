@@ -18,6 +18,7 @@ export class Pregunta1Component {
   multiplicacion: number = 0;
   promedio: number = 0;
   estado: string = '';
+  observacion: string = '';
   mensaje: string = '';
 
   procesar(): void {
@@ -31,6 +32,13 @@ export class Pregunta1Component {
     this.multiplicacion = this.n1 * this.n2 * this.n3 * this.n4;
     this.promedio = this.suma / 4;
     this.estado = this.promedio >= 13 ? 'Aprobado' : 'Desaprobado';
+    if (this.promedio >= 17) {
+      this.observacion = 'Excelente';
+    } else if (this.promedio >= 13) {
+      this.observacion = 'Regular';
+    } else {
+      this.observacion = 'En riesgo';
+    }
     this.mensaje = 'Proceso realizado correctamente.';
   }
 
@@ -47,6 +55,7 @@ export class Pregunta1Component {
     this.multiplicacion = 0;
     this.promedio = 0;
     this.estado = '';
+    this.observacion = '';
   }
 
   limpiarFormulario(): void {
